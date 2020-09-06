@@ -1,0 +1,3185 @@
+/*Style sheet for the theme*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@400;700&display=swap');
+
+/*
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+p {
+    margin-bottom: 1.15rem;
+    font-family: 'Lato', sans-serif;
+}
+
+html,
+body {
+
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.65;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 2.75rem 0 1.05rem;
+    font-family: 'Ramabhadra', sans-serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.802em;
+}
+
+h2 {
+    font-size: 1.602em;
+}
+
+h3 {
+    font-size: 1.424em;
+}
+
+h4 {
+    font-size: 1.266em;
+}
+
+h5 {
+    font-size: 1.125em;
+}
+
+
+/*wrapper for the main content* header and footer will be outside of the wrapper*/
+#wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto 1fr 1fr;
+    gap: 1%;
+    z-index: 0;
+    min-width: 320px;
+    margin: 0 auto;
+
+}
+
+/**
+ * #.# Header section
+ *
+ * header is outside of the wrapper and using the entire width
+ */
+header {
+    grid-column: 1/13;
+    padding-bottom: 0;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden;
+}
+
+header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -3;
+}
+
+#header_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+
+}
+
+/*Adding a element after header with a color */
+header::after {
+    content: "";
+    opacity: 0.45;
+    top: 0;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    background: #1481F3;
+    z-index: -2;
+
+}
+ #header-bar{
+      width:100%;
+      position: fixed;
+      top:0;
+      color:#000;
+      z-index: 100;
+      left:0;
+      padding:2% 0 2% 0;
+      transition: background-color 0.5s ease-in;
+
+      max-height: 50px;
+  }
+  #header-bar-max{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    padding:0;
+    z-index: 100;
+    height:100%;
+    margin-bottom: 10%;
+  }
+header h1 {
+    margin: 1% 0 0 19%;
+    width: auto;
+    color: #fff;
+    position: absolute;
+    font-size:1.502em;;
+}
+#header-bar-max a img{
+    width:12%;
+    height:auto;
+    padding-top:10px;
+    top:0;
+    padding-left:2%;
+    min-width: 50px;
+    max-width: 50px;
+
+}
+.header-shape{
+    z-index: -1;
+}
+.custom-logo-link{
+  width:100%;
+  height:auto;
+  top:0;
+  bottom:0;
+  left:0.5%;
+  padding-left:2%;
+  position: absolute;
+  min-width: 100px;
+}
+
+header a {
+    width: 100%;
+    text-decoration: none;
+}
+
+header svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5vw;
+	z-index:-1;
+
+
+}
+
+/*Main menu*/
+header nav {
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    display: none;
+    padding: 0 0 5% 0;
+    margin:0;
+    top:0;
+    background: rgba(52, 132, 209, 0.9);
+    position: fixed;
+}
+
+header nav ul {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 0;
+    padding: 2% 0 2% 0;
+
+}
+
+header nav h2 {
+    color: #fff;
+    margin: 0;
+    padding: 10% 0 10% 10%;
+    font-size: 2.2em;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+/*Current menu*/
+header nav li[class*="current-menu-item"]::after {
+    content: "";
+    width: 98%;
+    height: 100%;
+    border-left: 10px solid #061A2D;
+    display: block;
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    z-index: 1;
+    background-color: rgba(18, 54, 88, 0.4);
+
+}
+
+.hamburger {
+    position: absolute;
+    width: 20%;
+    right: 5%;
+    top: 1%;
+    margin-right: auto;
+    text-align: center;
+}
+
+header nav ul li {
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 2% 0 2% 0;
+    z-index: 0;
+
+}
+
+header nav ul li a:link,
+header nav ul li a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding-left: 10%;
+    width: 90%;
+    position: relative;
+    z-index: 2;
+}
+
+header nav ul li:hover {
+    text-decoration: none;
+    background: #1B548B;
+}
+
+/*Widget area header*/
+.widget-header {
+    width: 90%;
+    margin: 0% 0 10% 0%;
+    padding: 0;
+}
+
+.widget-header h2 {
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+    width: 50%;
+    margin: 20% 0 0 5%;
+    font-size: 1.2em;
+}
+
+/**
+ * #.# Index page
+ *
+ * The style for the index page
+ */
+#main-content {
+    grid-column: 1/13;
+    width: 100%;
+    margin-top: 5%;
+}
+.wp-block-columns {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#main-content .wp-block-column {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/*Container for the top three circles*/
+#top {
+    width: 90%;
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#top .circle {
+    border-radius: 50%;
+    background-color: #c7cdda;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto 5% auto;
+    max-width: 230px;
+    max-height: 230px;
+}
+
+#top h3 {
+    padding-top: 20%;
+    width: 70%;
+    text-align: center;
+    font-weight: bold;
+    margin: 10% auto 5% auto;
+    font-size: 1.3em;
+}
+
+.circle .textwidget {
+    display: block;
+    width: 80%;
+    text-align: left;
+    margin: 0 auto;
+    padding-bottom: 40%;
+}
+
+#main-content p {
+    width: 80%;
+    margin: 0 auto 10% auto;
+}
+
+#main-content .wp-block-columns p {
+    width: 80%;
+    text-align: left;
+
+}
+
+#main-content .wp-block-group {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-top: 2%;
+    margin: 3% 0 3% 0;
+    background-color: #eff1f7;
+
+}
+
+#main-content .wp-block-group a {
+    color: #000;
+
+}
+
+/*Select all paragraphs*/
+#main-content .wp-block-group>div {
+    width: 100%;
+    background-color: #eff1f7;
+}
+
+#main-content .wp-block-columns img {
+    height: auto;
+    margin: 0 5% 0 5%;
+    text-align: center;
+    width: 90%;
+    border-radius: 1em;
+
+}
+
+#main-content h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 1% auto 5% auto;
+}
+
+#main-content .wp-block-columns:last-of-type h3 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 0 0 5% 0;
+
+}
+
+/*Style for the section for the posts*/
+#articles {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#articles h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    margin: 4% 0 8% 0;
+
+}
+
+
+#articles h3 {
+    width: 100%;
+    text-align: center;
+    margin: 4% 0 5% 0;
+    padding: 2% 0 5% 0;
+    font-weight: bold;
+}
+
+#articles ul,
+#services ul {
+    width: 70%;
+    text-align: left;
+    margin: 0 auto 20% auto;
+}
+
+
+
+#articles ul li,
+#services ul li {
+    padding: 1% 0 5% 0;
+    list-style-type: none;
+}
+
+/* Hide all elements under 5 <li> and above */
+#articles ul li:nth-of-type(1n+6),
+#services ul li:nth-of-type(1n+6) {
+    display: none;
+}
+
+/*Add a checkbox before the list*/
+#articles ul li:before,
+#services ul li::before {
+    content: '✓';
+    padding-right: 5%;
+    color: #21b04b;
+    font-size: 1.6em;
+    font-weight: bold;
+
+}
+
+.button {
+    background-color: #649ee7;
+    padding: 3% 0 3% 0;
+    width: 90%;
+    margin: 5% auto 5% auto;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.post {
+    text-align: center;
+    margin: 0 auto 15% auto;
+    width: 90%;
+    padding: 1% 0 1% 0;
+    background-color: #f6f6f6;
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.55);
+    box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.55);
+    transition: transform .3s ease-in-out;
+}
+
+.post:first-of-type {
+    margin-top: 15%;
+}
+
+.post-animation {
+
+    transition: all .3s ease-in-out;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+
+
+/**
+      * #.# Standard page
+      *
+      * Page without any template
+     */
+#content {
+    grid-column: 1/13;
+    margin: 5% auto 5% auto;
+    width: 95%;
+
+}
+#content h2{
+
+    text-align: center;
+    width: 95%;
+
+}
+#content form {
+    width: 100%;
+    
+}
+#content input[type="text"],
+#content input[type="password"],
+#content input[type="email"] {
+    width: 100%;
+    margin: 0.5% 0 0.5% 0;
+    padding: 1% 0 1% 0;
+    border: 1px solid #A8C4E5;
+    background-color: #F7F9FC;
+    font-size: 1.1em;
+}
+
+#content label {
+    font-size: 1.1em;
+
+}
+#content textarea {
+    width: 100%;
+    padding: 1% 0 1% 0;
+    margin: 1% 0 1% 0;
+    resize: none;
+    border: 1px solid #A8C4E5;
+    background-color: #F7F9FC;
+    font-size: 1.1em;
+}
+
+#content input[type="submit"] {
+    width: 100%;
+    background-color: #2286FF;
+    padding: 2% 0 2% 2%;
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+    border: none;
+}
+
+#content .wp-block-social-links {
+margin-top:10%;
+padding-left:5%;
+}
+
+
+#content input[type="submit"]:hover {
+    background-color: #4F9BF8;
+}
+#content .wp-block-columns h2{
+
+    text-align:center;
+
+}
+
+
+#content img:last-of-type {
+    max-width: 100%;
+    width:100%;
+    height: auto;
+
+}
+
+#content h4 {
+    text-align: center;
+
+}
+
+#content .wp-block-column img {
+    margin: 0 5% 0 5%;
+    width: 90%;
+
+}
+
+#content h2 {
+    font-weight: bold;
+    width: 90%;
+    margin: 5% auto 5% auto;
+
+}
+
+
+#content .wp-block-columns:last-of-type img {
+    width: 50%;
+    margin: 5% auto 5% auto;
+    position: relative;
+    max-width: 200px;
+
+}
+#content .wp-block-column{
+    width: 100%;
+    margin: 2% auto 2% auto;
+    position: relative;
+    padding:0;
+
+}
+#content .wp-block-group h4{
+    text-align: left;
+    margin: 0 auto;
+    width:50%;
+    padding-left:15%;
+}
+#content .wp-block-group ul{
+    text-align: left;
+    margin: 0 auto;
+    width:50%;
+    margin-top:10%;
+    padding-left:13%;
+}
+
+#content h4{
+    width: 90%;
+    margin: 2% auto 2% auto;
+    position: relative;
+    padding:0;
+    text-align: left;
+
+}
+
+
+/*change all the h4 style if they have a figure befor*/
+#content figure+h4{
+    width: 90%;
+    margin: 2% auto 2% auto;
+    position: relative;
+    padding:0;
+    text-align: center;
+
+}
+
+#content figure {
+    width: 100%;
+    text-align: center;
+    margin:5% 0 5% 0;
+    padding:0;
+
+}
+
+#content p:not(.wp-block-columns) {
+    font-size: 1.05em;
+    width: 80%;
+    margin: 5% auto 5% auto;
+
+}
+#content .wp-block-columns p {
+    font-size: 1.05em;
+    width: 90%;
+    margin: 5% auto 5% auto;
+
+}
+
+/* #.# Services page
+ *
+ * Style for the services page
+ */
+#services {
+    grid-column: 1/13;
+    width: 100%;
+    margin: 5% 0 5% 0;
+}
+#services .wp-block-column{
+    margin:0;
+}
+
+#services p {
+    width: 95%;
+    margin: 0 auto;
+}
+#services img{
+	width:50%;
+}
+
+#services .wp-block-group {
+    background-color: #eff1f7;
+    width: 95%;
+    margin: 2% auto 2% auto;
+}
+
+#services .wp-block-columns {
+    margin: 0 auto;
+    width: 95%;
+    padding: 1% 2.5% 1% 2.5%;
+
+}
+
+#services h2 {
+    font-weight: bold;
+}
+
+#services .wp-block-group {
+    background-color: #eff1f7;
+    width: 100%;
+    margin: 0 auto;
+}
+/*Select the the last wo group and all div inside the wp columns*/
+#services .wp-block-group:last-of-type .wp-block-columns>div {
+    background-color: #C4CBD8;
+    border-radius: 2em;
+    text-align: center;
+    margin: 5% auto 5% auto;
+    padding: 2% 0 3% 0;
+    width: 100%;
+    max-width: 200px;
+}
+
+#services .wp-block-group h2 {
+    width: 90%;
+    padding: 2% 0 2% 2%;
+    font-weight: bold;
+
+}
+
+#services h2 {
+    text-align: center;
+    width: 100%;
+}
+
+#services h3{
+    width: 100%;
+    margin: 5% auto 5% auto;
+    text-align: center;
+
+}
+#services h4{
+    width: 85%;
+    margin: 5% auto 5% auto;
+}
+
+#services .wp-block-column img {
+    width: 80%;
+    margin: 5% 10% 5% 10%;
+    -webkit-box-shadow: 3px 7px 46px -5px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 3px 7px 46px -5px rgba(0, 0, 0, 0.21);
+    box-shadow: 3px 7px 46px -5px rgba(0, 0, 0, 0.21);
+}
+
+#services .wp-block-buttons {
+    background-color: #649ee7;
+    padding: 0;
+    width: 50%;
+    margin: 5% auto 0 auto;
+    margin-bottom: 10%;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+#services .wp-block-group h2 {
+    font-weight: bold;
+    width:100%;
+    padding:4% 0 2% 0;
+
+}
+#services .wp-block-group h3 {
+    font-weight: bold;
+    padding: 10% 0 10% 0;
+
+}
+#services .wp-block-columns h3 {
+    font-weight: bold;
+}
+#services .wp-block-columns p {
+    text-align: center;
+}
+
+#services .wp-block-button__link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 2;
+    background: none;
+    padding: 0;
+}
+
+.button-center {
+    background-color: #649ee7;
+    padding: 1% 0 1% 0;
+    width: 50%;
+    margin: 5% auto 10% auto;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+
+}
+
+/*Adding a element after used for animating the button */
+.button-center::after,
+#services .wp-block-buttons::after {
+    content: "";
+    background-color: #2985FB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 0%;
+    transition: all 0.3s ease-in;
+
+}
+
+
+.button-center:hover::after,
+#services .wp-block-buttons:hover::after {
+    height: 100%;
+}
+
+.button-center a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 1;
+
+}
+#services .wp-block-group p{
+    width:90%;
+    text-align: left;
+}
+#form-domain {
+    width: 90%;
+    margin: 0 auto 10% auto;
+}
+
+#form-domain form {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+#form-domain label {
+    width: 90%;
+    margin: 0;
+}
+
+#form-domain h5 {
+    width: 76%;
+}
+
+#form-domain input[type="text"] {
+    width: 98%;
+    margin: 2% 0 2% 0;
+    padding: 1%;
+    border: 1px solid #2E6AB2;
+    font-size: 1.1em;
+}
+
+#form-domain input[type="submit"] {
+    width: 30%;
+    background-color: #2286FF;
+    padding: 1% 0 1% 0%;
+    margin: 2% auto 2% auto;
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+    border: none;
+}
+#form-domain input[type="submit"]:hover {
+ opacity: 0.8;
+}
+/* #.# Product post page
+ *
+ * Style for a post template
+ */
+    #product-section {
+        grid-column: 1/13;
+        margin: 5% auto 10% auto;
+        width: 100%;
+    }
+    #product-section p {
+    
+        margin: 0 auto;
+        width: 95%;
+    }
+    #product-section h2,
+    #product-section h3 {
+        width: 80%;
+        margin: 2% auto;
+
+    }
+ #product-section .wp-block-group {
+    background-color: #eff1f7;
+    width: 96%;
+	 padding:2%;
+    margin: 2% auto 2% auto;
+}
+
+ #product-section .wp-block-columns {
+    margin: 0 auto;
+    width: 95%;
+    padding: 1% 2.5% 1% 2.5%;
+
+}
+
+    #product-section ul {
+        width: 90%;
+        margin: 5% auto 5% auto;
+    }
+
+    #product-section li {
+        width: 80%;
+        margin: 5% auto 0% auto;
+    }
+ #product-section img {
+        width: 60%;
+        margin: 5% auto 0 auto;
+    }
+
+/* #.# User control panel
+      *
+      * Style for the control page for users, template page
+      */
+#user-nav {
+    grid-column: 1/6;
+    margin: 2% 0 1% 0;
+    padding: 2% 0 0% 0;
+    text-align: center;
+    position: relative;
+}
+
+#user-nav img {
+    margin: 0 auto 5% 0;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+}
+
+#user-nav ul li a:link,
+#user-nav ul li a:visited {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+#user-nav ul li a:hover {
+
+    opacity: 0.8;
+}
+
+
+#user-nav ul {
+    width: 100%;
+    margin: 10% auto 0 0;
+
+}
+
+#user-nav li {
+    list-style-type: none;
+    color: #fff;
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+    padding: 2% 0 2% 0;
+
+}
+
+#user-page {
+    margin: 5% auto 5% auto;
+    grid-column: 1/13;
+    width: 100%;
+    background-color: #F3F4F9;
+}
+
+#user-page h2 {
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+}
+
+#user-page>.wp-block-group {
+    width: 90%;
+    padding: 0% 0 1% 0;
+    margin: 1% auto 5% auto;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+}
+
+#user-page .wp-block-columns {
+    width: 95%;
+    margin: 1% auto 5% auto;
+}
+
+#user-page .wp-block-group h2 {
+    width: 90%;
+    margin: 1% auto 5% auto;
+    text-align: center;
+}
+
+
+#user-page .wp-block-column {
+    background-color: #fff;
+    width: 95%;
+    padding: 0% 0 1% 0;
+    margin: 1% auto 5% auto;
+    -webkit-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+}
+
+#user-page div h3 {
+    text-align: center;
+    margin: 0;
+    padding: 1% 0 1% 0;
+    background-color: #5882B9;
+    color: #fff;
+}
+
+#user-page div ul {
+    width: 80%;
+    margin: 2% 0 2% 5%;
+}
+
+#user-page div ul li {
+    list-style-type: none;
+}
+
+#user-page a {
+    text-decoration: none;
+    color: #000;
+}
+
+#user-page a:hover {
+    opacity: 0.7;
+
+}
+
+#user-page div p {
+    margin: 0 auto;
+    width: 80%;
+    padding: 1% 0 1%
+}
+
+/**
+     * #.# Login page
+     * Login page is a template page 
+     */
+#form-login {
+    grid-column: 1/13;
+}
+
+#form-login form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#form-login input[type="text"],
+#form-login input[type="password"],
+#form-login input[type="email"] {
+    width: 94%;
+    margin: 0.5% 0 5% 0;
+    padding: 2%;
+    border: 1px solid #A8C4E5;
+    background-color: #F7F9FC;
+    font-size: 1em;
+}
+
+#form-login input[type="submit"] {
+    width: 98%;
+    background-color: #2286FF;
+    padding: 2% 0 2% 2%;
+    color: #fff;
+    margin: 2% 0 2% 0;
+    font-size: 1.3em;
+    text-align: center;
+    border: none;
+    position: relative;
+    z-index: 0;
+}
+#form-login input[type="submit"]:hover {
+   opacity: 0.8;
+}
+
+
+#form-login a:link,
+#form-login a:visited {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+#form-login form{
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+#form-login a:hover {
+    color: #589ADF
+}
+/**
+     * #.# Register page
+     * Register page template temporary Both login and register will share stylesand be one page. For demo without login functions this will be used
+     */
+     #form-login h2,
+     #form-login h3,
+     #form-login h4 {
+        margin: 2% auto 5% auto;
+        width: 100%;
+        text-align: center;
+    }
+    #form-login a{
+        margin: 2% auto 5% auto;
+        width: 100%;
+        text-align: center; 
+    }
+    
+     .half-width-container{
+         width:98%;
+         padding:1% ;
+     }
+
+/**
+ * #.# blog page
+ *
+ * Section for the blog category
+ */
+#news-articles {
+    grid-column: 1/13;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2% 0 5% 0;
+}
+
+#news-articles h2 {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 5% 0;
+    font-weight: bold;
+}
+
+#news-articles>article {
+    border: 1px solid #CBDEF8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 5% auto 5% auto;
+    padding: 1%;
+    max-width: 450px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+}
+
+#news-articles>article:hover {
+    border: 1px solid #2286FF;
+}
+
+#news-articles article img:first-of-type {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 0 0;
+}
+
+#news-articles article img:nth-last-child(2) {
+    width: 10%;
+    height: 5%;
+    min-height: 50px;
+    min-width: 50px;
+    margin: 2% 5% 2% 3%;
+    border-radius: 50%;
+}
+
+#news-articles article h3 {
+    width: 97%;
+    margin: 1% 0 3% 3%;
+}
+
+#news-articles article h4 {
+    width: 97%;
+    margin: 1% 0 3% 3%;
+    padding: 0 0 0 0%;
+    font-size: 1.2em;
+}
+
+#news-articles article p {
+    width: 90%;
+    margin: 1% 0 3% 3%;
+}
+
+#news-articles article h5 {
+    margin: 5% 0 3% 5%;
+    font-size: 1.2em;
+}
+
+#news-articles article h5::first-letter {
+    text-transform: uppercase;
+}
+
+/**
+ * #.# Post page
+ *
+ * The main section for the invidual post page
+ */
+ /*Bread crumb container*/
+ #nav-bread{
+     grid-column: 1/13;
+     width:90%;
+     margin:2% 0 0 4%;
+
+ }
+ #nav-bread ul li{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    
+}
+#nav-bread ul li a{
+    text-decoration: none;
+    color:#000;
+    
+}
+#nav-bread ul li a:hover{
+    opacity: 0.7;
+    
+}
+#image-background {
+    position: relative;
+    grid-column: 1/13;
+    width: 100%;
+    margin: 5% auto 35% auto;
+    z-index: 0;
+
+}
+
+#image-background img {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    z-index: 0;
+    width: 90%;
+    height: auto;
+}
+
+#main-article {
+    position: relative;
+    grid-column: 1/13;
+    width: 90%;
+    margin: 2% auto 10% auto;
+    background-color: #fff;
+    -webkit-box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.12);
+    padding: 1%;
+    z-index: 1;
+
+}
+
+#main-article h2 {
+    text-align: center;
+    margin: 0 0 10% 0;
+
+}
+
+#main-article a {
+    color: #000;
+
+}
+
+#main-article h3 {
+    margin: 5% 0 2% 5%;
+}
+#main-article h4{
+    margin: 5% 0 5% 5%;
+}
+
+#main-article img {
+    height: auto;
+    width: 100%;
+    margin-left: 5%;
+
+}
+
+#main-article article img {
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+#main-article article p {
+    width: 90%;
+    margin: 0 auto;
+
+
+}
+
+#main-article article::after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 90%;
+    display: block;
+    margin: 4% auto 5% auto;
+}
+
+#main-article #author-info img {
+    width: 10%;
+    height: 5%;
+    min-height: 50px;
+    min-width: 50px;
+    margin: 2% 5% 2% 0;
+    border-radius: 50%;
+}
+
+#main-article img {
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+}
+
+#main-article article p {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#main-article div[class*="addtoany_share_save_container"] {
+    width: 80%;
+    margin: 3% 0 0 5%;
+}
+
+#main-article article::after {
+    content: "";
+    border-bottom: 1px solid black;
+    width: 90%;
+    display: block;
+    margin: 4% auto 5% auto;
+}
+
+#author-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#author-info h4 {
+    width: 100%;
+    margin: 0;
+}
+
+#author-info h5 {
+    width: 50%;
+    margin: 5% 0 0 0;
+}
+
+#author-info h5::first-letter {
+    text-transform: uppercase;
+}
+
+#sidebar-post {
+    grid-column: 1/13;
+    margin: 2% auto 25% auto;
+    z-index: 1;
+    background-color: #fff;
+}
+
+#sidebar-post h3 {
+    text-align: left;
+    margin: 5% auto 5% auto;
+	width:80%;
+}
+
+#sidebar-post article {
+    width: 80%;
+    margin: 0 auto;
+
+}
+#sidebar-post h4{
+    margin: 5% 0 5% 0;
+}
+
+#sidebar-post img {
+    width: 60%;
+	height:auto;
+    max-width: 300px;
+    margin: 0 auto;
+}
+#sidebar-post img:hover {
+    opacity:0.7;
+}
+
+#sidebar-post article h3 {
+    text-align: left;
+}
+#sidebar-post article p {
+    width:70%;
+}
+
+/**
+ * #.# Footer section
+ *
+ * Footer is outside of the wrapper and using the entire width
+ */
+footer {
+    background-color: #5075b2;
+    width: 100%;
+    height: 100%;
+}
+
+#footer-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer nav {
+    width: 100%;
+    margin: 5% 0% 10% 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer nav ul li {
+    list-style-type: none;
+    font-size: 1.2em;
+    color: #fff;
+    margin-right: 10%;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+footer .sub-menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+footer .sub-menu li {
+
+    font-weight: normal;
+}
+
+
+footer nav ul {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 0 10%;
+}
+
+/*Current active link*/
+footer nav li[class*="current-menu-item"]::after {
+    content: "";
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    display: block;
+
+}
+
+footer nav ul li h3 {
+    color: #fff;
+}
+
+footer nav ul li a:link,
+footer nav ul li a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer nav ul li a:hover {
+    opacity: 0.7;
+}
+
+footer h4 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/*Widget area*/
+.footer-widget {
+    width: 100%;
+    max-width: 950px;
+    margin: 2% 0 3% 0;
+}
+
+.footer-widget ul {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footer-widget ul li {
+    width: 20%;
+    display: inline-block;
+    font-size: 2.5em;
+
+}
+
+.footer-widget h3 {
+    width: 80%;
+    margin: 0 auto 0% auto;
+    padding: 0;
+    color: #fff;
+}
+
+footer form {
+    width: 80%;
+}
+
+.footer-widget form h4 {
+    color: #fff;
+    text-align: left;
+}
+
+.footer-widget input[type='text'] {
+    width: 70%;
+    padding: 2% 0 2% 0;
+}
+
+.footer-widget input[type='submit'] {
+    width: 20%;
+    padding: 2% 0 2% 0;
+    border-radius: 1em;
+}
+
+/*Style for nwsletter plugin*/
+.footer-widget .tnp-widget-minimal input.tnp-email {
+    width: 85%;
+    padding: 2% 0 2% 0;
+    margin: 3% 0 0 10%;
+}
+
+/*Style for nwsletter plugin*/
+.footer-widget .tnp-widget-minimal input.tnp-submit {
+    width: 50%;
+    padding: 2% 0 2% 0;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    margin: 3% 0 0 10%;
+    background-color: #11253d;
+    border: none;
+    color: #fff;
+}
+.footer-widget .tnp-widget-minimal input.tnp-submit:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/**
+ * #.# Media QUery for larger screens
+ *
+ * Adjust all content for width over 801px
+ */
+@media screen and (min-width: 801px) {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 2.75rem 0 1.05rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        line-height: 1.15;
+    }
+
+    h1 {
+        margin-top: 0;
+        font-size: 2.488em;
+    }
+
+    h2 {
+        font-size: 2.074em;
+    }
+
+    h3 {
+        font-size: 1.728em;
+    }
+
+    h4 {
+        font-size: 1.44em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    #wrapper {
+        grid-template-rows: auto;
+        gap: 1%;
+        max-width: 1200px;
+        z-index: 0;
+        position: relative;
+
+    }
+
+    /*Header section*/
+    header {
+
+        padding-bottom: 10%;
+        width: 100%;
+        position: relative;
+
+    }
+
+    header img {
+        top: -10%;
+    }
+
+    #header_container {
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        z-index: 0;
+        max-width: 1200px;
+    }
+    /*Add some gradient at the top of the header */
+    #header_container::after {
+        content: "";
+        width: 99.6vw;
+        top: 0%;
+        position: absolute;
+        margin-left: -49.6vw;
+        left: 49%;
+        height: 100%;
+        background: rgb(79, 149, 221);
+        background: linear-gradient(180deg, rgba(79, 149, 221, 0.8) 5%, rgba(255, 255, 255, 0) 50%);
+    }
+
+    header h1 {
+        margin: 3% 0 0 33%;
+        width: 20%;
+        font-size: 1.7em;
+        color: #fff;
+        display: block;
+        position: static;
+
+    }
+
+    header svg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 5vw;
+    }
+
+    header a {
+        width: 30%;
+        text-decoration: none;
+    }
+
+    /*Main menu*/
+    header nav {
+        width: 70%;
+        height: auto;
+        margin-top: 0.5%;
+        position: static;
+        display: block;
+        background: none;
+    }
+
+    #close {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+/*Container where the fixed navigation will be placed*/
+  #header-bar{
+      width:100%;
+      position: fixed;
+      top:0;
+      color:#000;
+      z-index: 100;
+      left:0;
+      width:100%;
+      padding:0% 0 10px 0;
+  }
+  #header-bar-max{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding:0px 0 0 0;
+    z-index: 100;
+    position: relative;
+  }
+  #header-bar-max a img{
+      width:6%;
+      height:auto;
+      padding-top:7px;
+      top:0;
+      padding-left:2%;
+      max-width: 100%;
+  }
+  .custom-logo-link{
+    width:100%;
+    height:auto;
+    top:0;
+    bottom:0;
+    left:1%;
+    padding-left:2%;
+    position: absolute;
+  }
+    header nav h2 {
+        display: none;
+    }
+    header nav ul {
+        padding: 1% 1% 0 0;
+        margin: 0;
+        width: 99%;
+        text-align: right;
+    }
+    header nav ul li {
+        display: inline-block;
+        padding: 0 0 0 0%;
+        margin: 0 0 0 2%;
+        width: auto;
+    }
+    header nav ul li:nth-of-type(1n+4) {
+       background-color: #98BC24;
+       padding:0 0.5% 0 0.5%;
+    }
+    /*Current menu*/
+    header nav li[class*="current-menu-item"]::after {
+        content: '';
+        border-left: 0;
+        top:7%;
+        border-bottom: 2px solid #fff;
+        display: block;
+        width: 100%;
+        margin: 4% auto 2% auto;
+        background: none;
+        position: absolute;
+
+    }
+
+
+    .button-menu {
+        background-color: #92b725;
+        padding: 2% 0 2% 0;
+    }
+
+    header nav ul li a:link,
+    header nav ul li a:visited {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 0;
+        width: 100%;
+        margin:0;
+
+    }
+    header nav ul li:hover {
+       background:none;
+
+    }
+    header nav ul li a:hover {
+       opacity: 0.8;
+ 
+     }
+
+    /*Widget area header*/
+    .widget-header {
+        width: 50%;
+        margin: 15% 0 5% 10%;
+    }
+
+    .widget-header h2 {
+        color: #fff;
+        width: 100%;
+        margin: 0;
+        font-size: 2.074em;
+
+
+    }
+
+    /*Set all wordpress block element to positon relative and z index 1 to make the background 100%*/
+    .wp-block-group {
+        position: relative;
+        z-index: 1;
+    }
+
+    .wp-block-columns {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /**
+      * #.# Index page
+      *
+      * Footer is outside of the wrapper and using the entire width
+     */
+
+    #main-content {
+        margin-top: 5%;
+    }
+
+    /*Container for the circle widgets*/
+    #top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+
+
+    }
+
+    #top .circle {
+        border-radius: 50%;
+        background-color: #c7cdda;
+        width: 32%;
+        height: 30%;
+        text-align: center;
+        margin: 0 auto 5% auto;
+        max-width: 300px;
+        max-height: 300px;
+
+    }
+
+    #top h3 {
+        padding-top: 10%;
+        width: 70%;
+        text-align: center;
+        font-weight: bold;
+        margin: 10% auto 5% auto;
+        font-size: 1.3em;
+    }
+
+    .circle .textwidget {
+        display: block;
+        width: 70%;
+        text-align: left;
+        margin: 0 auto;
+        padding-bottom: 50%;
+    }
+
+    #main-content .wp-block-columns img {
+        height: auto;
+        width: 80%;
+        margin: 0 0 0 10%;
+        border-radius: 1em;
+        -webkit-box-shadow: 0px 5px 28px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 5px 28px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 5px 28px 0px rgba(0, 0, 0, 0.15);
+        background: none;
+    }
+
+    #main-content .wp-block-columns {
+        margin: 0 0 10% 0;
+        width: 100%;
+    }
+
+    #main-content .wp-block-columns h2 {
+        width: 80%;
+        text-align: left;
+        font-weight: bold;
+        margin: 0 0 5% 15%;
+    }
+
+    #main-content .wp-block-group .wp-block-columns:last-of-type p {
+        width: 90%;
+        text-align: left;
+        margin: 0 0 15% 10%;
+
+    }
+
+    #main-content .wp-block-group:last-of-type h3 {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 0 5% 0%;
+
+    }
+
+    #main-content .wp-block-group :first-of-type p {
+
+        width: 50%;
+        margin: 0;
+
+
+    }
+
+    #main-content .wp-block-columns p {
+        width: 70%;
+        margin: 0 0 0 15%;
+    }
+
+
+    #main-content .wp-block-group {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        text-align: left;
+        background-color: #eff1f7;
+        margin-bottom: 10%;
+        padding: 2% 0 0% 0;
+
+    }
+
+
+    #main-content .wp-block-group img {
+        margin: 0 0 0 15%;
+        padding: 0;
+        width: 80%;
+        height: auto;
+        border-radius: 0.5em;
+        opacity: 0.9;
+    }
+
+    #main-content .wp-block-group h2 {
+        width: 100%;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 0 5% 10%;
+
+    }
+
+    #main-content .wp-block-group:last-of-type h2 {
+        font-weight: bold;
+        text-align: center;
+        margin: 0 0 5% 0;
+    }
+
+    /*Select all paragraphs*/
+    #main-content .wp-block-group>div {
+        width: 95%;
+        background-color: #eff1f7;
+        margin: 0 auto 5% auto;
+    }
+
+    /*Style for the section for the posts*/
+    #articles {
+        z-index: 1;
+        position: relative;
+        padding: 2%;
+        width: 96%;
+        max-width: 100%;
+        margin: 0 0 10% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, rgba(225, 227, 233, 1) 40%, rgba(225, 227, 233, 1) 75%, rgba(255, 255, 255, 1) 75%);
+    }
+
+    #articles h2 {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        margin: 4% 0 2% 0;
+        padding: 2% 0 2% 0;
+    }
+
+    #articles h3 {
+        width: 100%;
+        text-align: center;
+        margin: 4% 0 10% 0;
+        padding: 2% 0 2% 0;
+    }
+
+    #articles ul {
+        width: 60%;
+        text-align: left;
+        margin: 0 auto 20% auto;
+
+    }
+
+
+    #articles ul li {
+        padding: 1% 0 5% 0;
+    }
+
+    /*Buttons inside the articles*/
+    .button {
+        padding: 3% 0 3% 0;
+        width: 90%;
+        margin: 5% auto 10% auto;
+
+    }
+
+    .button a {
+        font-size: 1.2em;
+    }
+
+    .post {
+        text-align: center;
+        margin: 0 0% 0 3%;
+        width: 31%;
+        padding: 0% 0% 0% 0;
+        background-color: #f6f6f6;
+        -webkit-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.55);
+        -moz-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.55);
+        box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.55);
+        transition: transform .3s ease-in-out;
+    }
+
+    .post:first-of-type {
+        margin: 0;
+    }
+
+    /**
+      * #.# Standard page
+      *
+      * Footer is outside of the wrapper and using the entire width
+     */
+    #content {
+        grid-column: 1/13;
+        margin: 5% auto 5% auto;
+        width: 100%;
+
+    }
+
+  
+    #content .wp-block-column img {
+        margin: 0 auto;
+
+    }
+
+    /*Timeline plugin*/
+    #content #cd-timeline {
+        position: relative;
+        background-color: #eff1f7;
+        z-index: 0;
+        width:90%;
+        padding:0 5% 0 5%
+    }
+
+    #content h2 {
+        font-weight: bold;
+
+    }
+
+    #content p {
+        font-size: 1.05em;
+        margin:0 auto;
+        width: 85%;
+
+    }
+    #content .wp-block-group h4{
+        text-align: left;
+        margin: 0 auto;
+        width:94%;
+        padding:0 0 0 6%;
+    }
+    #content .wp-block-group ul{
+        text-align: left;
+        margin: 0 auto;
+        width:94%;
+        margin-top:10%;
+        padding:0 0 0 6%;
+    }
+    
+
+    #content p:not(.wp-block-columns) {
+        font-size: 1.05em;
+        width: 85%;
+        margin: 5% auto 5% auto;
+    
+    }
+    #content .wp-block-columns p {
+        margin:0 auto;
+        width: 90%;
+
+    }
+    #content .wp-block-columns h2{
+
+        text-align: left;
+    
+    }
+    #content form {
+        width: 65%;
+    }
+    content img{
+        width:80%;
+        height:auto;
+    }
+
+    #content input[type="text"],
+    #content  input[type="password"],
+    #content  input[type="email"] {
+        font-size: 1em;
+        width:100%;
+    }
+
+    #content  label {
+        font-size: 1.1em;
+
+    }
+    content .wp-block-group{
+        background-color: red;
+    }
+
+    #content  textarea {
+        font-size: 1.1em;
+        width:100%;
+    }
+
+    #content input[type="submit"] {
+        padding: 2% 0 2% 2%;
+        font-size: 1.3em;
+        text-align: left;
+    }
+    
+    #form-section .wp-block-columns:last-of-type img {
+        width: 90%;
+        margin: 0;
+    }
+
+
+    #content input[type="submit"]:hover {
+        background-color: #4F9BF8;
+    }
+
+    /* #.# User control panel
+      *
+      * Style for the control page for users
+      */
+    #user-nav {
+        grid-column: 1/3;
+        margin: 20% 0 20% 5%;
+        padding: 10% 0 0% 0;
+        text-align: center;
+        position: relative;
+        width: 95%;
+        background-color: #5882B9;
+    }
+    #user-nav img {
+        margin: 0 auto 20% auto;
+        min-width: 100px;
+        min-height: 100px;
+        border-radius: 50%;
+    }
+    #user-nav ul li a:link,
+    #user-nav ul li a:visited {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.1em;
+    }
+
+    #user-nav ul {
+        margin: 10% 0 0 0;
+
+    }
+    #content img:last-of-type {
+        max-width: 100%;
+        width:86%;
+        height: auto;
+    
+    }
+
+    #user-nav li {
+        list-style-type: none;
+        color: #fff;
+        width: 50%;
+        text-align: left;
+        margin: 0 auto;
+        padding: 2% 0 2% 0;
+
+    }
+
+    #user-page {
+        margin: 5% 0 5% 0;
+        grid-column: 3/13;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #F3F4F9;
+    }
+
+    #user-page h2 {
+        text-align: left;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #user-page>.wp-block-group {
+        width: 100%;
+        padding: 0% 0 1% 0;
+        margin: 1% 2% 1% 2%;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #user-page .wp-block-columns {
+        width: 100%;
+    }
+
+    #user-page .wp-block-column {
+        background-color: #fff;
+        width: auto;
+        padding: 0% 0 1% 0;
+        margin: 1% 2% 1% 2%;
+        -webkit-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #user-page div h3 {
+        padding: 2% 0 2% 0;
+    }
+
+    #user-page div ul {
+        width: 50%;
+        margin: 2% 0 2% 5%;
+    }
+
+    #user-page div ul li {
+        list-style-type: none;
+    }
+
+    #user-page a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    #user-page a:hover {
+        opacity: 0.7;
+
+    }
+
+    #user-page div p {
+        margin: 0 auto;
+        width: 80%;
+        padding: 1% 0 1%
+    }
+
+    /* #.# Register page
+    * Register page template temporary Both login and register will share stylesand be one page. For demo without login functions this will be used
+    */
+   #form-login a{
+       margin: 2% auto 5% auto;
+       width: 100%;
+       text-align: center; 
+   }
+   
+    .half-width-container{
+        width:45%;
+        padding:1% ;
+    }
+    #form-login .half-width-container input[type="text"],
+    #form-login .half-width-container input[type="password"],
+    #form-login .half-width-container input[type="email"],
+    #form-login .half-width-container input[type="password"] {
+    width: 94%;
+    margin: 0.5% 0 5% 0;
+    padding: 3% 0 3% 0;
+}
+    /**
+ * #.# Services page
+ *
+ * Style for the services page
+ */
+    #services {
+        width: 100%;
+        margin: 5% 0 5% 0;
+    }
+
+    #services #articles {
+        background: none;
+        margin: 0 0 0 0;
+    }
+
+    #services #plans h2 {
+        width: 100%;
+        margin: 4% 0 2% 0;
+        padding: 2% 0 2% 0;
+    }
+
+    #services #plans h3 {
+        width: 100%;
+        text-align: center;
+        margin: 4% 0 10% 0;
+        padding: 2% 0 2% 0;
+    }
+
+    #services #plans ul {
+        width: 60%;
+        text-align: left;
+        margin: 0 auto 20% auto;
+    }
+
+    #services #plans ul li {
+        padding: 1% 0 5% 0;
+    }
+
+    #services .wp-block-group {
+        background-color: #eff1f7;
+        padding: 1% 0 2% 0;
+        margin: 2% 0 5% 0;
+    }
+    #services .wp-block-columns p {
+        text-align: left;
+    }
+    #services .wp-block-columns h2{
+        text-align: left;
+    }
+    #services .wp-block-columns:last-of-type h4{
+        text-align: left;
+    }
+    #services  h4:last-of-type{
+        text-align: left;
+        width:90%;
+        margin: 3% auto 3% auto;
+    }
+    
+    
+
+    #services .wp-block-group:last-of-type {
+        padding: 0;
+    }
+
+    #services .wp-block-group:last-of-type .wp-block-columns>div {
+        background-color: #C4CBD8;
+        border-radius: 2em;
+        text-align: center;
+        margin: 2% auto 2% 7.5%;
+        max-width: 200px;
+        padding: 2% 0 3% 0;
+    }
+
+    #services .wp-block-group:last-of-type h2 {
+        padding: 2% 0 2% 0;
+        text-align: left;
+    }
+
+    #services .wp-block-group:last-of-type h2 {
+        width: 100%;
+        padding: 2% 0 2% 0;
+        text-align: center;
+        margin: 2% 0 2% 0;
+    }
+
+
+    /*Style the wordpress button*/
+    #services .wp-block-buttons {
+        padding: 1.5% 0 1.5% 0;
+        width: 40%;
+        margin: 15% auto 0 auto;
+        text-align: center;
+    }
+
+    #services .wp-block-group .wp-block-buttons {
+        padding: 1% 0 0.5% 0;
+        width: 20%;
+        margin: 5% auto;
+        margin-bottom: 5%;
+    }
+
+    #services .wp-block-button__link {
+        font-size: 1.2em;
+        padding: 0;
+    }
+
+    #services .wp-block-column img {
+        width: 80%;
+        -webkit-box-shadow: 3px 7px 46px -5px rgba(0, 0, 0, 0.21);
+        -moz-box-shadow: 3px 7px 46px -5px rgba(0, 0, 0, 0.21);
+        box-shadow: 3px 7px 46px -5px rgba(0, 0, 0, 0.21);
+    }
+
+    #services .wp-block-column {
+        margin: 0 0 5% 0;
+    }
+
+    #services .wp-block-group img {
+        width: 70%;
+        height: auto;
+        margin: 5% 0 0 10%;
+    }
+
+    .button-center {
+        padding: 1% 0 1% 0;
+        width: 20%;
+        margin-bottom: 10%;
+    }
+
+    .button-center a {
+        font-size: 1.2em;
+        position: relative;
+        z-index: 2;
+
+    }
+
+    #form-domain {
+        width: 90%;
+        margin: 0 auto 10% auto;
+    }
+
+    #form-domain form {
+        width: 90%;
+        margin: 0;
+    }
+
+    #form-domain label {
+        width: 90%;
+        margin: 0;
+    }
+
+    #form-domain h5 {
+        width: 76%;
+    }
+
+    #form-domain input[type="text"] {
+        width: 80%;
+        margin: 2% 0 2% 0;
+        padding: 1%;
+        border: 1px solid #2E6AB2;
+        font-size: 1.1em;
+    }
+
+    #form-domain input[type="submit"] {
+        width: 10%;
+        background-color: #2286FF;
+        padding: 1% 0 1% 0%;
+        margin: 0 0 0 5%;
+        color: #fff;
+        font-size: 1.3em;
+        text-align: center;
+        border: none;
+
+    }
+
+
+
+    /**
+     * #.# Contact page
+     *
+     * Contact page is a template site
+     */
+
+
+
+
+    /*First wp-block-columns*/
+    #form-section .wp-block-columns:first-of-type {
+        text-align: center;
+        margin-bottom: 20%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2% 0 2% 0;
+        z-index: 0;
+    }
+
+    #form-section .wp-block-columns:first-of-type>div {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        text-align: center;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 25% 25% 25% 0;
+        background-color: #649EE7;
+        margin: 0 5% 0 5%;
+        color: #fff;
+    }
+
+    #form-section .wp-block-columns {
+        background-color: #EDEFF6;
+        width: 100%;
+        z-index: 0;
+        position: relative;
+    }
+
+    #form-section .wp-block-columns:last-of-type {
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+        padding: 2% 0 2% 0;
+    }
+
+    #form-section .wp-block-columns:last-of-type img {
+        width: 90%;
+        margin: 0;
+    }
+
+    #form-section .wp-block-columns:last-of-type h2 {
+        width: 50%;
+        text-align: left;
+        margin: 0 auto 10% auto;
+    }
+
+    #form-section .wp-block-columns:last-of-type h4 {
+        width: 50%;
+        text-align: left;
+        margin: 0 auto 3% auto;
+    }
+
+    #form-section input[type="submit"]:hover {
+        background-color: #4F9BF8;
+    }
+
+    /*Widget area contact*/
+    .widget-content {
+        width: 50%;
+    }
+
+    #left-side {
+        margin-left: 10%;
+        width: 40%;
+    }
+
+    /**
+ * #.# blog page
+ *
+ * header is outside of the wrapper and using the entire width
+ */
+    #news-articles {
+        grid-column: 1/13;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 2% 0 5% 0;
+    }
+
+    #news-articles h2 {
+        text-align: center;
+        width: 100%;
+        margin: 0 0 5% 0;
+        font-weight: bold;
+    }
+
+    #news-articles>article {
+        border: 1px solid #CBDEF8;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 28%;
+        margin: 2% 0 2% 2%;
+        padding: 1%;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.19);
+    }
+
+    #news-articles article img:first-of-type {
+        width: 100%;
+        margin: 0;
+    }
+
+    #news-articles article img:nth-last-child(2) {
+        width: 15%;
+
+        height: 10%;
+
+    }
+
+    #news-articles article h3 {
+        width: 100%;
+        margin: 1% 0 3% 0;
+    }
+
+    #news-articles article h4 {
+        width: 60%;
+        margin: 1% 0 3% 0;
+        padding: 0 0 0 0%;
+        font-size: 1.2em;
+    }
+
+    #news-articles article h5 {
+        margin: 5% 0 3% 10%;
+        font-size: 1.2em;
+    }
+
+    /**
+ * #.# Post page
+ *
+ * The main section for the invidual post page
+ */
+ #nav-bread{
+    grid-column: 1/13;
+    width:95%;
+    margin-left:4%;
+
+}
+    #image-background {
+        grid-column: 1/11;
+        width: 92%;
+        margin: 5% auto 40% auto;
+    }
+
+    #image-background img {
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: auto;
+    }
+
+    #main-article {
+        grid-column: 1/9;
+        margin: 2% 0 10% 5%;
+        -webkit-box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.12);
+        -moz-box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: 10px 10px 36px 0px rgba(0, 0, 0, 0.12);
+    }
+
+    #main-article h2 {
+        text-align: center;
+        margin: 0 0 10% 0;
+    }
+
+    #main-article h3 {
+        margin: 5% 0 2% 5%;
+    }
+
+    #main-article #author-info img {
+        width: 10%;
+        height: 5%;
+        min-height: 70px;
+        min-width: 70px;
+        margin: 2% 5% 2% 0;
+        border-radius: 50%;
+    }
+
+    #main-article img {
+        max-width: 100%;
+        max-height: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        margin-left: 10%;
+        height: auto;
+    }
+
+    #main-article article p {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #main-article article::after {
+        content: "";
+        border-bottom: 1px solid black;
+        width: 90%;
+        display: block;
+        margin: 4% auto 5% auto;
+    }
+
+    #author-info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #author-info h4 {
+        width: 100%;
+        margin: 0;
+    }
+
+    #author-info h5 {
+        width: 50%;
+        margin: 5% 0 0 0;
+    }
+
+    #author-info h5::first-letter {
+        text-transform: uppercase;
+    }
+
+    #sidebar-post {
+        grid-column: 10/13;
+        margin: 2% 5% 15% 0;
+        z-index: 1;
+        background-color: #fff;
+    }
+
+    #sidebar-post h3 {
+        text-align: left;
+        margin: 5% auto 5% auto;
+		 width: 90%;
+    }
+
+    #sidebar-post article {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #sidebar-post img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #sidebar-post article h3 {
+        text-align: left;
+    }
+    #sidebar-post article p {
+        width:100%;
+    }
+
+    /**
+ * #.# Product post page
+ *
+ * Style for a post template
+ */
+    #product-section {
+        grid-column: 1/13;
+        margin: 0 auto;
+        width: 95%;
+
+    }
+	
+
+    #product-section h2,
+    #product-section h3 {
+        width: 50%;
+        margin: 2% auto;
+
+    }
+
+    #product-section ul {
+        width: 50%;
+        margin: 5% auto 0 auto;
+    }
+	#product-section .wp-block-group {
+    background-color: #eff1f7;
+    width: 96%;
+	padding:2%;
+    margin: 2% auto 2% auto;
+}
+
+    #product-section li {
+        width: 80%;
+        margin: 5% auto 0 auto;
+    }
+
+    /**
+     * #.# Footer section
+     *
+     * Footer is outside of the wrapper and using the entire width
+     */
+    footer {
+        background-color: #5075b2;
+        width: 100%;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    /*Max-width*/
+    #footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer nav {
+        width: 50%;
+        max-width: 600px;
+        margin: 2% 0% 3% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer nav ul li {
+        list-style-type: none;
+        font-size: 1.3em;
+        color: #fff;
+        margin-right: 10%;
+        font-weight: bold;
+    }
+
+    footer .sub-menu {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+
+    footer .sub-menu li {
+
+        font-weight: normal;
+    }
+
+
+    footer nav ul {
+        display: flex;
+        text-align: left;
+        width: 90%;
+        margin: 0 0 0 10%;
+    }
+
+
+    footer nav ul li a:link,
+    footer nav ul li a:visited {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+
+    footer nav ul li a:hover {
+        opacity: 0.7;
+    }
+
+    footer h4 {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+
+    /*Widget area*/
+    .footer-widget {
+        width: 40%;
+        max-width: 600px;
+        margin: 2% 0 3% 0;
+
+    }
+
+    .footer-widget ul {
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .footer-widget ul li {
+        width: 20%;
+        display: inline-block;
+        font-size: 2.5em;
+
+    }
+
+    .footer-widget h3 {
+        width: 100%;
+        margin: 0 auto 3% auto;
+        padding: 0;
+        color: #fff;
+
+    }
+
+    .footer-widget form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-widget form h4 {
+        color: #fff;
+        text-align: left;
+    }
+
+    footer input[type='email'] {
+        width: 70%;
+        padding: 2% 0 2% 0;
+    }
+
+    /*Style for nwsletter plugin*/
+    .footer-widget .tnp-widget-minimal input.tnp-email {
+        width: 65%;
+        padding: 2% 0 2% 0;
+        margin: 0;
+    }
+
+    footer input[type='submit'] {
+        width: 20%;
+        padding: 2% 0 2% 0;
+        font-size: 1.1em;
+        color: #fff;
+    }
+
+    /*Style for nwsletter plugin*/
+    .footer-widget .tnp-widget-minimal input.tnp-submit {
+        width: 25%;
+        padding: 2% 0 2% 0;
+        border-radius: 0.5em;
+        font-size: 1.1em;
+        margin: 0 0 0 5%;
+
+    }
+}
+
+/*Media query to adjust some elements for medium screens*/
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    #top .circle {
+        border-radius: 50%;
+        background-color: #c7cdda;
+        width: 32%;
+        height: 30%;
+        text-align: center;
+        margin: 0 auto 5% auto;
+        max-width: 230px;
+        max-height: 230px;
+    }
+
+    #services .wp-block-group:last-of-type .wp-block-columns>div {
+
+        margin: 2% auto 2% 4%;
+    }
+
+    #news-articles>article {
+        width: 35%;
+        margin-left: 10%;
+    }
+    #header-bar{
+        margin:0;
+        padding:0 0 1% 0;
+    }
+    #header-bar-max{
+        margin:0 0 2% 0%;
+        padding:0;
+    }
+    #articles h2{
+        font-size: 1.7em;
+    }
+    #articles h3{
+        font-size: 1.3em;
+    }
+    #articles ul {
+        width: 80%;
+        text-align: left;
+        margin: 0 auto 10% auto;
+    }
+}
+
+/*
+media query for a tablet screen with min-width 500px Changing the size and position for the logo 
+*/
+@media screen and (min-width: 500px) and (max-width:800px) {
+  
+#header-bar-max{
+    margin:0 0 6% 0%;
+}
+
+header h1 {
+  margin: 1% 0 0 15%;
+  width: auto;
+  color: #fff;
+  position: absolute;
+  font-size:1.602em;;
+}
+#header-bar-max a img{
+  width:9%;
+  height:auto;
+  padding-top:15px;
+  top:0;
+  padding-left:2%;
+  min-width: 50px;
+  max-width: 100px;
+
+}
+.custom-logo-link{
+width:100%;
+height:auto;
+top:2%;
+bottom:0;
+left:2%;
+padding-left:2%;
+position: absolute;
+min-width: 200px;
+}
+
+header a {
+  width: 100%;
+  text-decoration: none;
+}
+}
+
+/*Make adjusment to the navigation to in landscape mode on smartphone*/
+@media only all and (orientation:landscape) and (max-height:550px) {
+   
+    #header-bar{
+
+        padding:0% 0 5px 0;
+    }
+    #header-bar-max{
+      display: flex;
+      flex-direction: row;
+      flex-wrap:nowrap;
+      width: 100%;
+      max-width: 1200px;
+      z-index: 100;
+      position: relative;
+    }
+    #header-bar-max a img{
+        width:10%;
+        height:auto;
+        padding-top:6px;
+        top:0;
+        padding-left:2%;
+        min-width: 50px;
+        max-width: 50px;
+    }
+    .custom-logo-link{
+        left:0.5%;
+        padding-left:2%;
+        position: absolute;
+        min-width: 50px;
+      }
+      .hamburger {
+        position: absolute;
+        width: 20%;
+        right: 5%;
+        top: 0.2%;
+        margin-right: auto;
+        text-align: center;
+    }
+    header nav ul{
+        padding:0;
+    }
+    header nav ul li{
+        padding:1.2% 0 1.2% 0;
+    }
+    
+
+    header nav h2 {
+     margin:0;
+     padding:0;
+     padding:3% 0 3% 5%;
+     font-size: 1.5em;
+    }
+    
+    header nav ul li a:link,
+header nav ul li a:visited {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 2;
+} 
+
+}
+
+/**
+ * #.# Media QUery for very large screen
+ *
+ * Adjust some contents width to make it the entire width of the element
+ */
+@media screen and (min-width: 1201px) {
+    #main-content #articles::after {
+        content: "";
+        z-index: -1;
+        top: 0%;
+        width: 99.6vw;
+        position: absolute;
+        margin-left: -49.6vw;
+        left: 49%;
+        height: 100%;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, rgba(225, 227, 233, 1) 40%, rgba(225, 227, 233, 1) 75%, rgba(255, 255, 255, 1) 75%);
+
+    }
+
+    header img {
+        top: -30%;
+    }
+
+
+    #main-content .wp-block-group::after,
+    #form-section .wp-block-columns::after,
+    #services .wp-block-group::after,
+	#product-section .wp-block-group::after,
+    #content #cd-timeline::after {
+        content: "";
+        width: 99.6vw;
+        top: 0%;
+        position: absolute;
+        margin-left: -49.6vw;
+        left: 49%;
+        z-index: -1;
+        height: 100%;
+        background-color: #eff1f7;
+    }
+
+
+}
