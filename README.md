@@ -1,2 +1,5 @@
 # WordpressTheme_hosting
-A hosting company theme for Wordpress
+## A hosting company theme for Wordpress
+
+###Features
+
