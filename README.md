@@ -3,6 +3,6 @@
 
 ### Features
 
-*custom pages
-*hamburger-menu
+* custom pages
+* hamburger-menu
 
